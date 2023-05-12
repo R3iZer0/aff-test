@@ -1,10 +1,333 @@
-<!-- registration.html -->
-
+{% load static %}
 {% block content %}
-  <h1>Register</h1>
-  <form method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Register</button>
-  </form>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-kSDOocJ2+VVyEgPcdXl+RzYJ6ecpU6PlqGMGcNsv3gMOteQJzHdAx/lfX6gEnkRJGrNF6UZPl6zM+5x5/E5nGw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+
+      /*Register etc */
+      @media (min-width: 1025px) {
+.h-custom {
+height: 100vh !important;
+}
+}
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+font-size: 1rem;
+line-height: 2.15;
+padding-left: .75em;
+padding-right: .75em;
+}
+.card-registration .select-arrow {
+top: 13px;
+}
+
+.gradient-custom-2 {
+/* fallback for old browsers */
+background: rgb(207, 207, 207);
+
+/* Chrome 10-25, Safari 5.1-6 */
+background: -webkit-linear-gradient(to right, rgb(176, 176, 176), rgb(176, 176, 176));
+
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: -webkit-linear-gradient(to right, rgb(176, 176, 176), rgb(176, 176, 176));
+}
+
+.bg-indigo {
+background-color: #02010a;
+}
+@media (min-width: 992px) {
+.card-registration-2 .bg-indigo {
+border-top-right-radius: 15px;
+border-bottom-right-radius: 15px;
+}
+}
+@media (max-width: 991px) {
+.card-registration-2 .bg-indigo {
+border-bottom-left-radius: 15px;
+border-bottom-right-radius: 15px;
+}
+}
+
+
+      /* Navigation */
+      nav {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #f8f9fa;
+          padding: 10px 0;
+      }
+      
+      nav ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          gap: 10px;
+      }
+      
+      nav ul li a {
+          text-decoration: none;
+          color: #282129;
+          padding: 10px;
+          border-radius: 10px;
+          transition: background-color 0.3s ease-in-out;
+      }
+      
+      nav ul li a:hover {
+          background-color: #e9ecef;
+      }
+      
+      nav ul li a.active {
+          background-color: #007bff;
+          color: #fff;
+      }
+      
+
+      /* Account Info */
+      h3 {
+          text-align: center;
+          margin: 30px 0;
+      }
+
+      
+      /* Rectangles */
+      .rectangle {
+          flex-direction: column;
+          background-color: #5265CA;
+          margin: 0% 1% ;
+          display: inline-flex;
+          align-items:left;
+          width: 350px;
+          height: 118px;
+          background-color: rgba(81.59, 100.84, 201.88, 1); 
+          border-radius: 11px;
+
+      }
+
+
+      
+      /* Logout button */
+      form {
+          text-align: center;
+          margin-top: 50px;
+      }
+      
+      button {
+          margin-top: 10px;
+          border-radius: 10px;
+      }
+
+      .account{
+        position: relative;text-align: center;top: 40%; font-size: 50px; line-height: 100%;text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); color: white;
+      }
+      .userIMG{
+        position: relative;width:80;height: 87px;left:48% ;top:-100px;filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+      }
+
+      .rectangle-container{
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
+
+      }
+
+      .recICO{
+        position:relative ;
+        width: 80px;
+        height: 80px;
+        left:70%;
+        bottom:20px
+      }
+
+@media (max-width: 590px){
+.rectangle{
+  flex-direction: column;
+          background-color: #5265CA;
+          margin-top: 10%;
+          display: inline-flex;
+          align-items:left;
+          width: 350px;
+          height: 118px;
+          background-color: rgba(81.59, 100.84, 201.88, 1); 
+          border-radius: 11px;
+
+    }
+
+
+
+    .rectangle-container{
+      position: relative;
+      display:flex  ;
+      flex-direction: column;
+        justify-content: center;
+        padding-top: 20px;
+        margin-left: 5%;
+        margin-right: 5%;
+
+
+  }
+}
+
+
+
+  @media  (max-width: 992px) {
+
+
+  .account{
+    font-size:20px;
+  }
+  .userIMG{
+        position: relative;
+        width:80;
+        height: 87px;
+        left:48% ;
+        top:-100px;
+        filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+      }
+
+      .rectangle {
+        flex-direction: column;
+        background-color: #5265CA;
+
+        align-items: left;
+        width: 350px;
+        height: 118px;
+        background-color: rgba(81.59, 100.84, 201.88, 1); 
+        border-radius: 11px;
+      }
+      
+      .parent-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 20px;
+      }
+
+    
+  }    
+
+  </style>
+  </head>
+  <body>
+    <div>
+      <div>
+        <div style="display: flex;justify-content: center;">
+          <div class="rectangle5" style="width: 1920px;height: 207px;left: 0px">
+            <div style="position: relative; left: 0; width: 100%; height: 208px;">
+              <img src="{% static 'css/billboard.jpg' %}" style="width: 100%; height: 100%; object-fit: cover; object-position: 100% 30%; position: absolute; z-index: -1;">
+              <p class="account" >Trade Forex & CFDs with a Global Leader</p>
+              <p class="Welcome" style="position:relative;width: 344px;height: 77px;top:50%;left:40% ;font-family: 'Inter';font-style: normal;font-weight: 700;font-size: 32px;line-height: 39px;color: #ffffff;text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);"></p>        
+            </div>
+            <section class="h-100 h-custom gradient-custom-2">
+              <div class="container py-5 h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                  <div class="col-16">
+                    <div class="card card-registration card-registration-2" style="border-radius: 15px;">
+                      <div class="card-body p-0">
+                        <div class="row g-0">
+                          <div class="col-lg-6">
+                            <div class="p-5">
+                              <h3 class="fw-normal mb-5" style="color: #030111;">Explore. Practice. Trade.</h3>
+                              <p>From your desk or on the go, we have the right platform for you.</p>
+                              <img src="https://www.metatrader4.com/i/metatrader-4-logo-og.png" style="position: relative; left: 0; width: 200px; height: 100px;">
+                              <h3><span class="color-black">Benefit from:</span></h3>
+                              <p><span class="colored">✓</span> Over 400 financial instruments</p>
+                              <p><span class="colored">✓</span> Currency Pairs, Precious Metals</p>
+                              <p><span class="colored">✓</span> CFDs on Stocks (MT5)*, Commodities, Stock Indices and Bonds</p>
+                              <p><span class="colored">✓</span> Up to 100'000 USD of virtual money</p>
+                              <p><span class="colored">✓</span> ​No risks, no obligations</p>
+                              <p class="mid">*Please be aware that our offer on stock CFDs is available on live accounts only.</p>
+            
+                              
+            
+                            </div>
+                          </div>
+                          <div class="col-lg-6 bg-indigo text-white">
+                            <div class="p-5">
+                              <h3 class="fw-normal mb-5">Contact Details</h3>
+                          <form method="post">
+                            {% csrf_token %}
+                            <div class="row">
+                              <div class="col-md-6 mb-4">
+                                <div class="form-outline">
+                                  <input type="text" id="name" class="form-control form-control-lg" name="name" required/>
+                                  <label class="form-label" for="name">Name</label>
+                                </div>
+                              </div>
+                              <div class="col-md-6 mb-4">
+                                <div class="form-outline">
+                                  <input type="text" id="last_name" class="form-control form-control-lg" name="last_name" required/>
+                                  <label class="form-label" for="last_name">Last Name</label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-8 mb-4">
+                                <div class="form-outline">
+                                  <input type="text" id="phone" class="form-control form-control-lg" name="phone" required/>
+                                  <label class="form-label" for="phone">Phone</label>
+                                </div>
+                              </div>
+                              <div class="col-md-4 mb-4">
+                                <div class="form-outline">
+                                  <input type="text" id="country" class="form-control form-control-lg" name="country" required/>
+                                  <label class="form-label" for="country">Country</label>
+                                </div>
+                              </div>
+                            </div>
+
+                              
+                              <div class="mb-4 pb-2">
+                                <div class="form-outline form-white">
+                                  <input type="text" id="email" class="form-control form-control-lg" name="email" required/>
+                                  <label class="form-label" for="email">Email</label>
+                                  
+                                </div>
+                              </div>
+                              
+                              
+                              <div class="mb-4 pb-2">
+                                <label for="id_experience" class="form-label">Have you had prior experience?</label>
+                                <select name="experience" id="experience" class="form-select">
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                                <div class="mt-4 pt-2">
+                                  <input class="btn btn-primary btn-lg" type="submit" value="Register"/>
+                                </div>
+                          </form>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+      </div>
+
+    
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNSbN+2" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+</body>
+</html>
 {% endblock %}
+
