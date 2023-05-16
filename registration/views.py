@@ -28,3 +28,8 @@ def lead_register(request):
         form = LeadForm()
     return render(request, 'registration.html', {'form': form})
 
+
+
+def lead_list(request):
+    leads = Lead.objects.all()
+    return render(request, 'leads_view.html', {'leads': leads})
