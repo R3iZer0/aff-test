@@ -29,6 +29,17 @@ def lead_register(request):
     return render(request, 'registration.html', {'form': form})
 
 
+from django.shortcuts import render
+
+def leads_data_view(request):
+    leads = Lead.objects.all()  # Replace 'Lead' with your actual model name or queryset
+    context = {
+        'leads': leads
+    }
+    return render(request, 'leads_data.html', context)
+
+
+
 
 def lead_list(request):
     leads = Lead.objects.all()
