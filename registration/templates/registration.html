@@ -8,7 +8,13 @@
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-kSDOocJ2+VVyEgPcdXl+RzYJ6ecpU6PlqGMGcNsv3gMOteQJzHdAx/lfX6gEnkRJGrNF6UZPl6zM+5x5/E5nGw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=FontName&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;600&display=swap" rel="stylesheet">
     <style>
 
       /*Register etc */
@@ -29,8 +35,7 @@ top: 13px;
 
 .gradient-custom-2 {
 /* fallback for old browsers */
-background: url("https://images.unsplash.com/photo-1642790106117-e829e14a795f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2130&q=80");
-
+background-color: #022041;
 /* Chrome 10-25, Safari 5.1-6 */
 background: -webkit-linear-gradient(to right, rgb(176, 176, 176), rgb(176, 176, 176));
 
@@ -53,77 +58,6 @@ border-bottom-left-radius: 15px;
 border-bottom-right-radius: 15px;
 }
 }
-
-
-      /* Navigation */
-      nav {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          background-color: #f8f9fa;
-          padding: 10px 0;
-      }
-      
-      nav ul {
-          list-style-type: none;
-          margin: 0;
-          padding: 0;
-          display: flex;
-          gap: 10px;
-      }
-      
-      nav ul li a {
-          text-decoration: none;
-          color: #282129;
-          padding: 10px;
-          border-radius: 10px;
-          transition: background-color 0.3s ease-in-out;
-      }
-      
-      nav ul li a:hover {
-          background-color: #e9ecef;
-      }
-      
-      nav ul li a.active {
-          background-color: #007bff;
-          color: #fff;
-      }
-      
-
-      /* Account Info */
-      h3 {
-          text-align: center;
-          margin: 30px 0;
-      }
-
-      
-      /* Rectangles */
-      .rectangle {
-          flex-direction: column;
-          background-color: #5265CA;
-          margin: 0% 1% ;
-          display: inline-flex;
-          align-items:left;
-          width: 350px;
-          height: 118px;
-          background-color: rgba(81.59, 100.84, 201.88, 1); 
-          border-radius: 11px;
-
-      }
-
-
-      
-      /* Logout button */
-      form {
-          text-align: center;
-          margin-top: 50px;
-      }
-      
-      button {
-          margin-top: 10px;
-          border-radius: 10px;
-      }
-
       .account{
         position: relative;text-align: center;top: 40%; font-size: 50px; line-height: 100%;text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); color: white;
       }
@@ -146,75 +80,6 @@ border-bottom-right-radius: 15px;
         bottom:20px
       }
 
-@media (max-width: 590px){
-.rectangle{
-  flex-direction: column;
-          background-color: #5265CA;
-          margin-top: 10%;
-          display: inline-flex;
-          align-items:left;
-          width: 350px;
-          height: 118px;
-          background-color: rgba(81.59, 100.84, 201.88, 1); 
-          border-radius: 11px;
-
-    }
-
-
-
-    .rectangle-container{
-      position: relative;
-      display:flex  ;
-      flex-direction: column;
-        justify-content: center;
-        padding-top: 20px;
-        margin-left: 5%;
-        margin-right: 5%;
-
-
-  }
-}
-
-
-
-  @media  (max-width: 992px) {
-
-
-  .account{
-    font-size:20px;
-  }
-  .userIMG{
-        position: relative;
-        width:80;
-        height: 87px;
-        left:48% ;
-        top:-100px;
-        filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
-      }
-
-      .rectangle {
-        flex-direction: column;
-        background-color: #5265CA;
-
-        align-items: left;
-        width: 350px;
-        height: 118px;
-        background-color: rgba(81.59, 100.84, 201.88, 1); 
-        border-radius: 11px;
-      }
-      
-      .parent-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding-top: 20px;
-      }
-
-
-    
-  }    
-
   </style>
   </head>
   <body>
@@ -224,12 +89,111 @@ border-bottom-right-radius: 15px;
       <div>
         <div style="display: flex;justify-content: center;">
           <div class="rectangle5" style="width: 1920px;height: 207px;left: 0px">
-            <div style="position: relative; left: 0; width: 100%; height: 150px;background-color: #12193f;">
+            <div style="position: relative; left: 0; width: 100%; height: 100px;background-color: #080808;">
               <p class="account" >Trade Forex & CFDs with a Global Leader</p>
               <p class="Welcome" style="position:relative;width: 344px;height: 77px;top:50%;left:40% ;font-family: 'Inter';font-style: normal;font-weight: 700;font-size: 32px;line-height: 39px;color: #ffffff;text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);"></p>        
             </div>
+
+            <section >
+            <div style="padding-top:50px;padding-bottom: 50px;display: flex;justify-content: center;background-color: #022041;;">
+              <div class="Rectangle1" style="width: 1600px; height: 750px; background-color: rgba(206.13, 199.39, 164.04, 1);
+              box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+               border-radius: 30px;">
+               <p class="Investmentthat can reach the Moon!" style="position: absolute;
+               width: 563px;
+               height: 150px;
+               left: 250px;
+               top: 200px;
+               font-family: 'Fredoka', sans-serif;
+               font-style: bold;
+               font-weight: 700;
+               font-size: 70px;
+               line-height: 115%;">Investment that can reach the Moon!</p>
+
+
+               <p style="position: absolute;
+               width: 666px;
+               height: 240px;
+               left: 190px;
+               top: 600px;
+               
+               font-family: 'Fredoka';
+               font-style: bold;
+               font-weight: 600;
+               font-size: 45px;
+               line-height: 115%;">From you’r desk or on the go, we have the right platform for you!</p>
+
+
+
+              <img style="box-sizing: border-box;  
+              position: absolute;
+              width: 287.48px;
+              height: 579px;
+              left: 1000px;
+              top: 300px;
+              background: url(News.png);
+              filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+              border-radius: 40px;" src="{% static 'css/News.png' %}"/>
+              <img style="box-sizing: border-box;
+
+              position: absolute;
+              width: 351.37px;
+              height: 668.86px;
+              left: 1200px;
+              top: 250px;
+              
+              background: url(Portfolio.png);
+              filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+              border-radius: 50px;
+              transform: rotate(12.23deg);" 
+              
+              src="{% static 'css/Portfolio.png' %}"/>
+
+
+              <div>
+              <button class="bg-gradient-to-b from-gray-800 shadow rounded-3xl" style="position: absolute;
+              width: 600px;
+              height: 150px;
+              left: 170px;
+              top: 800px;
+              
+              background: linear-gradient(0deg, #021C4E, #021C4E);
+              box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+              border-radius: 42px;"
+              onclick="scrollToContent();">
+              
+
+
+              <p class="text-5xl leading-10 text-white" style="position: absolute;
+              width: 467px;
+              height: 84px;
+              left: 80px;
+              top: 35px;
+
+              
+              font-family: 'Fredoka';
+               font-style: bold;
+               font-weight: 600;
+               font-size: 45px;
+               line-height: 115%;
+              
+              color: #FFFFFF;
+              
+              text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">Sign up  ↓</p>
+
+              </button>
+              <script>
+                function scrollToContent() {
+                  const content = document.getElementById('content');
+                  content.scrollIntoView({ behavior: 'smooth' });
+                }
+              </script>
+              </div>
+              </div>
+            </div>
+            </section>
             <section class="h-100 h-custom gradient-custom-2">
-              <div class="container py-5 h-100">
+              <div class="container py-5 h-100" id="content">
                 <div class="row d-flex justify-content-center align-items-center h-100">
                   <div class="col-16">
                     <div class="card card-registration card-registration-2" style="border-radius: 15px;">
