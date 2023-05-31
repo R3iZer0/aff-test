@@ -192,6 +192,102 @@ border-bottom-right-radius: 15px;
               </div>
             </div>
             </section>
+
+            <section>
+              <div style="padding-top:50px;padding-bottom: 50px;display: flex;justify-content: center;background-color: #022041;;">
+                <div class="Rectangle1" style="width: 1600px; height: 700px; background-color: rgba(206.13, 199.39, 164.04, 1);
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                 border-radius: 30px;">
+                 <img style="box-sizing: border-box;
+                          position: absolute;
+                          width: 663px;
+                          height: 439px;
+                          left: 195px;
+                          top:1100px;
+                          background: url(SL_022321_41020_14.jpg);
+                          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+                          border-radius: 30px;" 
+                       
+                       src="{% static 'css/Rectangle 5.png' %}"/>
+                 <div style="position: absolute;
+                 width: 706px;
+                 height: 588px;
+                 left: 1000px;
+                 top: 1050px;
+                 background: rgba(105, 94, 232, 0.08);
+                 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+                 border-radius: 30px;">
+                 <h3 class="fw-normal mb-5">Contact Details</h3>
+                          <form method="post">
+                            {% csrf_token %}
+                            <div class="row">
+                              <div class="col-md-6 mb-4">
+                                <div class="form-outline">
+                                  <input type="text" id="name" class="form-control form-control-lg" name="name" required/>
+                                  <label class="form-label" for="name">Name</label>
+                                </div>
+                              </div>
+                              <div class="col-md-6 mb-4">
+                                <div class="form-outline">
+                                  <input type="text" id="last_name" class="form-control form-control-lg" name="last_name" required/>
+                                  <label class="form-label" for="last_name">Last Name</label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-8 mb-4">
+                                <div class="form-outline">
+                                  <input type="text" id="phone" class="form-control form-control-lg" name="phone" required/>
+                                  <label class="form-label" for="phone">Phone</label>
+                                </div>
+                              </div>
+                              <div class="col-md-4 mb-4">
+                                <div class="form-outline">
+                                  <input type="text" id="country" class="form-control form-control-lg" name="country" required/>
+                                  <label class="form-label" for="country">Country</label>
+                                </div>
+                              </div>
+                            </div>
+
+                              
+                              <div class="mb-4 pb-2">
+                                <div class="form-outline form-white">
+                                  <input type="text" id="email" class="form-control form-control-lg" name="email" required/>
+                                  <label class="form-label" for="email">Email</label>
+                                  
+                                </div>
+                              </div>
+                              
+                              
+                              <div class="mb-4 pb-2">
+                                <label for="id_experience" class="form-label">Have you had prior experience?</label>
+                                <select name="experience" id="experience" class="form-select">
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                                <div class="mt-4 pt-2">
+                                  <input class="btn btn-primary btn-lg" type="submit" value="Register"/>
+                                </div>
+                          </form>
+                             
+                 </div>
+                 
+
+                </div>
+
+
+
+
+            </section>
+
+
+
+
+
+
+
+
+
             <section class="h-100 h-custom gradient-custom-2">
               <div class="container py-5 h-100" id="content">
                 <div class="row d-flex justify-content-center align-items-center h-100">
