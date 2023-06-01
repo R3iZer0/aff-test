@@ -109,7 +109,7 @@ def save_to_google_sheet(request: HttpRequest):
     # Prepare the data to be written to the Google Sheet
     data = []
     for lead in leads:
-        data.append([lead.name, lead.last_name, lead.email, lead.phone, lead.country, lead.get_experience_display(), current_datetime])
+        data.append([lead.name, lead.last_name, lead.email, lead.phone, lead.country, lead.experience, current_datetime])
 
     # Define the range where the data should be written (e.g., Sheet1!A1:G)
     range_name = 'Sheet1!A1:G'
