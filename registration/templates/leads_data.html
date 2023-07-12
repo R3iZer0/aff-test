@@ -79,7 +79,7 @@
             <td>{{ lead.email }}</td>
             <td>{{ lead.phone }}</td>
             <td>{{ lead.country }}</td>
-            <td>{{ lead.experience }}</td>
+            <td>{{ lead.get_experience_display }}</td>            
             <td>{{ lead.created_at }}</td>
             <td>
                 <button class="copy-button" onclick="copyPhone('{{ lead.phone }}')"style="background-color: green;font-size: 12px;border-radius: 10px;color: white;" >Copy Number</button>

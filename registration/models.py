@@ -12,5 +12,5 @@ class Lead(models.Model):
     email=models.EmailField()
     phone=models.CharField(max_length=20)
     country=models.CharField(max_length=100)
-    experience = models.BooleanField()
+    experience = models.CharField(max_length=3, choices=EXPERIENCE_CHOICES)
     created_at = models.DateTimeField(auto_now=True)
