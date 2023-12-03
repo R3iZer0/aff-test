@@ -61,7 +61,7 @@ def download_table(request):
     sheet = workbook.active
     
     # Write the table headers
-    headers = ['Id', 'Name', 'Last Name', 'Email', 'Phone', 'Country', 'Experience', 'Registered at']
+    headers = ['Id', 'Name', 'Last Name', 'Email', 'Phone', 'Lost Amount', 'Company', 'Registered at']
     for col_num, header in enumerate(headers, 1):
         sheet.cell(row=1, column=col_num, value=header)
     
@@ -72,8 +72,8 @@ def download_table(request):
         sheet.cell(row=row_num, column=3, value=lead.last_name)
         sheet.cell(row=row_num, column=4, value=lead.email)
         sheet.cell(row=row_num, column=5, value=lead.phone)
-        sheet.cell(row=row_num, column=6, value=lead.country)
-        sheet.cell(row=row_num, column=7, value=lead.experience)
+        sheet.cell(row=row_num, column=6, value=lead.lost_amount)
+        sheet.cell(row=row_num, column=7, value=lead.company)
         created_at_naive = lead.created_at.replace(tzinfo=None)
         sheet.cell(row=row_num, column=8, value=created_at_naive)    
     # Create the response object with appropriate headers
